@@ -1,0 +1,12 @@
+li a {
+    color:darkblue;
+}
+body {
+    background: white url("images/background.jpg") no-repeat right bottom;
+    background-size: 100%;
+}
+.userInf {
+    position: absolute;
+    top:0px;
+    right: 15px;
+}

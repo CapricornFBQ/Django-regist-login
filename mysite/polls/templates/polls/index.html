@@ -1,0 +1,16 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'polls/style.css' %}"/>
+{% if username %}
+    <p class="userInf">{{username }}/<a href="{% url 'polls:logout' %}">logout</a></p>
+{% else %}
+    <p class="userInf"><a href="{% url 'polls:regist' %}">regist</a>/<a href="{% url 'polls:login' %}">login</a></p>
+{% endif %}
+{% if latest_question_list %}
+    <ul>
+        {% for question in latest_question_list %}
+            <li><a href="{% url 'polls:detail' question.id %}">{{question.question_text}}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}

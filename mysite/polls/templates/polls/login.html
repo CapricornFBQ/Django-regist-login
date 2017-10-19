@@ -1,0 +1,6 @@
+<form method="post">
+    <!--csrf token在所有的表单模版中使用，防止跨域攻击-->
+    {% csrf_token %}
+    {{uf.as_p}}
+    <input type="submit" value="login">
+</form>
